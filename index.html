@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSI Ecosystem to the Sky Expansion Strategy</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Inter', sans-serif;
+background-color: #0f172a;
+color: #e2e8f0;
+margin: 0;
+padding: 0;
+}
+h1, h2, h3, h4 {
+color: #00e5ff;
+letter-spacing: -0.02em;
+}
+.material-card {
+background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+border: 1px solid #334155;
+border-radius: 16px;
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+padding: 24px;
+transition: transform 0.2s ease-in-out;
+}
+.material-card:hover {
+transform: translateY(-4px);
+}
+.chart-container {
+position: relative;
+width: 100%;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+height: 350px;
+max-height: 400px;
+}
+.accent-glow {
+text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+.flow-arrow {
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 2rem;
+color: #00e5ff;
+}
+@media (min-width: 768px) {
+.chart-container {
+height: 400px;
+}
+.flow-arrow {
+transform: rotate(-90deg);
+}
+}
+@media (min-width: 1024px) {
+.flow-arrow {
+transform: rotate(0deg);
+}
+}
+</style>
+</head>
+<body class="antialiased">
+
+<div id="metadata" style="display:none;" 
+data-palette="Vibrant Brilliant Blues & Cyan" 
+data-no-svg="Confirmed: NEITHER Mermaid JS NOR SVG were used anywhere in the output." 
+data-plan="Summary: Section 1 Hook/The Threat, Section 2 Trojan Horse Strategy Flow, Section 3 Unconventional Targets, Section 4 Funding Vehicles, Section 5 Competitive Takedown vs Axon."
+data-chart-choices="Chart 1: Bar Chart (Goal: Compare reactive vs proactive win rates). Chart 2: Flow Diagram via HTML/CSS (Goal: Organize Trojan Horse strategy). Chart 3: Donut Chart (Goal: Composition of funding). Chart 4: Radar Chart (Goal: Compare MSI vs Axon capabilities).">
+</div>
+
+<nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-700 py-4 px-6">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="text-2xl font-bold tracking-tighter text-white">MOTOROLA <span class="text-cyan-400">ECOSYSTEM</span></div>
+<div class="hidden md:flex space-x-6 text-sm font-semibold">
+<a href="#strategy" class="hover:text-cyan-400 transition-colors">The Pivot</a>
+<a href="#trojan-horse" class="hover:text-cyan-400 transition-colors">Trojan Horse</a>
+<a href="#funding" class="hover:text-cyan-400 transition-colors">Funding</a>
+<a href="#competition" class="hover:text-cyan-400 transition-colors">Axon Takedown</a>
+</div>
+</div>
+</nav>
+
+<header class="max-w-7xl mx-auto px-6 py-20 text-center">
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white accent-glow">MSI Ecosystem to the <span class="text-cyan-400">Sky</span> Expansion Strategy</h1>
+<p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+A strategic pivot from reactive RFP bidding to proactive, needs-based ecosystem selling. Lead with Sky assets (BRINC & SkySafe) to seamlessly pull through Ground infrastructure across Canada and the Central US.
+</p>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 pb-24 space-y-24">
+
+<section id="strategy" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-4">The Revenue Gap & The Pivot</h2>
+<p class="text-slate-400 mb-6 text-lg leading-relaxed">
+Our current sales motion in the Central region and Canada relies too heavily on reactive RFP responses. This results in anemic pipelines and allows competitors like Axon to out-position us by preemptively shaping customer requirements.
+</p>
+<p class="text-slate-400 text-lg leading-relaxed">
+To close the revenue gap, we must immediately shift to proactive, Blue Sheet driven campaigns. The data below projects the massive differential in win rates when we dictate the narrative versus waiting for a bid.
+</p>
+</div>
+<div class="material-card">
+<h3 class="text-xl font-semibold mb-2 text-center text-white">Projected Win Rates: Reactive vs. Proactive</h3>
+<div class="chart-container">
+<canvas id="winRateChart"></canvas>
+</div>
+</div>
+</section>
+
+<section id="trojan-horse" class="material-card p-8 md:p-12">
+<h2 class="text-3xl font-bold mb-4 text-center">The "Trojan Horse" Strategy</h2>
+<p class="text-slate-400 text-center max-w-4xl mx-auto mb-12 text-lg">
+We cannot sell the ecosystem by starting with legacy components. We must capture attention by addressing urgent, unbudgeted pain points using cutting-edge aerial technology, which naturally necessitates our robust ground infrastructure.
+</p>
+<div class="flex flex-col lg:flex-row justify-between items-stretch gap-4">
+<div class="flex-1 bg-slate-800 p-6 rounded-xl border border-cyan-500/30 text-center relative overflow-hidden">
+<div class="text-6xl mb-4">🛩️</div>
+<h4 class="text-xl font-bold text-cyan-400 mb-2">1. The Catalyst (Sky)</h4>
+<p class="text-sm text-slate-300">Lead with BRINC Drones & SkySafe. Address immediate threats like prison contraband drops and campus drone incursions.</p>
+</div>
+<div class="flow-arrow">&#8594;</div>
+<div class="flex-1 bg-slate-800 p-6 rounded-xl border border-slate-600 text-center">
+<div class="text-6xl mb-4">📡</div>
+<h4 class="text-xl font-bold text-blue-400 mb-2">2. The Network (Radio)</h4>
+<p class="text-sm text-slate-300">Drones require unbreakable comms. Pull through APX NEXT radios & Mission-Critical MANET to guarantee hardware dispatch.</p>
+</div>
+<div class="flow-arrow">&#8594;</div>
+<div class="flex-1 bg-slate-800 p-6 rounded-xl border border-slate-600 text-center">
+<div class="text-6xl mb-4">📹</div>
+<h4 class="text-xl font-bold text-indigo-400 mb-2">3. The Eyes (Video)</h4>
+<p class="text-sm text-slate-300">Integrate aerial feeds. Pull through Avigilon video management systems for comprehensive situational awareness.</p>
+</div>
+<div class="flow-arrow">&#8594;</div>
+<div class="flex-1 bg-slate-800 p-6 rounded-xl border border-slate-600 text-center">
+<div class="text-6xl mb-4">💻</div>
+<h4 class="text-xl font-bold text-emerald-400 mb-2">4. The Brain (Software)</h4>
+<p class="text-sm text-slate-300">Unify the data. Pull through CommandCentral, Aware, CAD, 911, and Cyber for sovereign, PBMM-compliant command.</p>
+</div>
+</div>
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="material-card col-span-1 md:col-span-3">
+<h2 class="text-3xl font-bold mb-4 text-center">Unconventional Target Matrix</h2>
+<p class="text-slate-400 text-center max-w-3xl mx-auto mb-8">
+Stop targeting standard policing task forces exclusively. Expand the pipeline into non-traditional sectors with overlapping mesh network needs across Canada and the 13 Central US States.
+</p>
+</div>
+<div class="material-card border-t-4 border-t-cyan-400">
+<div class="text-5xl mb-4">🏢</div>
+<h3 class="text-2xl font-bold mb-2 text-white">Correctional Facilities</h3>
+<p class="text-slate-400">Deploy SkySafe detection to locate and prevent highly lucrative drone contraband drops (weapons/narcotics) across complex prison perimeters like Jackson County.</p>
+</div>
+<div class="material-card border-t-4 border-t-blue-500">
+<div class="text-5xl mb-4">🎓</div>
+<h3 class="text-2xl font-bold mb-2 text-white">College Campuses</h3>
+<p class="text-slate-400">Protect densely populated events and massive stadiums from unauthorized rogue drone threats utilizing integrated airspace intelligence and Avigilon overwatch.</p>
+</div>
+<div class="material-card border-t-4 border-t-indigo-500">
+<div class="text-5xl mb-4">🚔</div>
+<h3 class="text-2xl font-bold mb-2 text-white">First Responders (DFR)</h3>
+<p class="text-slate-400">Enable autonomous BRINC Guardian drone deployments instantly via the tactile, physical emergency panic button on APX NEXT smart radios.</p>
+</div>
+</section>
+
+<section id="funding" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center material-card">
+<div class="order-2 lg:order-1 chart-container">
+<canvas id="fundingChart"></canvas>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="text-3xl font-bold mb-4">Follow the Money: Procurement Pathways</h2>
+<p class="text-slate-400 mb-6 text-lg leading-relaxed">
+Agencies rarely have multi-million dollar budgets waiting for holistic ecosystem purchases. Our sales teams must act as strategic funding consultants.
+</p>
+<p class="text-slate-400 mb-6 text-lg leading-relaxed">
+By mapping our proactive pitches directly to massive federal and provincial grant pools, we remove the financial friction that blocks ecosystem-wide adoption.
+</p>
+<ul class="space-y-4 text-slate-300">
+<li class="flex items-start">
+<span class="text-cyan-400 mr-3 text-xl font-bold">✓</span>
+<div><strong class="text-white">FEMA C-UAS Grants:</strong> Targeting the massive infrastructure protection pools.</div>
+</li>
+<li class="flex items-start">
+<span class="text-blue-400 mr-3 text-xl font-bold">✓</span>
+<div><strong class="text-white">Canadian CSSP & RCMP:</strong> Leveraging our Triple-CS & PBMM Cloud compliance.</div>
+</li>
+<li class="flex items-start">
+<span class="text-indigo-400 mr-3 text-xl font-bold">✓</span>
+<div><strong class="text-white">USDA Rural Development:</strong> Equipping underserved Central US counties.</div>
+</li>
+</ul>
+</div>
+</section>
+
+<section id="competition" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-4 text-red-400">Defeating Axon</h2>
+<p class="text-slate-400 mb-6 text-lg leading-relaxed">
+Competitors are attempting to flank us with disjointed, app-based solutions. We win by proving our integrated, mission-critical superiority.
+</p>
+<p class="text-slate-400 text-lg leading-relaxed mb-6">
+Our moat is built on <strong>Network Survivability</strong> (MANET vs LTE), <strong>True Airspace Defense</strong> (Native CommandCentral integration), <strong>Frictionless Hardware</strong> (Tactile radio triggers), and <strong>Sovereign Cloud Data</strong> (PBMM compliance in Canada).
+</p>
+</div>
+<div class="material-card">
+<h3 class="text-xl font-semibold mb-2 text-center text-white">Competitive Capability Matrix</h3>
+<div class="chart-container">
+<canvas id="radarChart"></canvas>
+</div>
+</div>
+</section>
+
+</main>
+
+<script>
+const wrapLabel = (label, limit = 16) => {
+if (typeof label !== 'string') return label;
+if (label.length <= limit) return label;
+const words = label.split(' ');
+const lines = [];
+let currentLine = '';
+for (const word of words) {
+if ((currentLine + word).length > limit) {
+if (currentLine.trim() !== '') lines.push(currentLine.trim());
+currentLine = word + ' ';
+} else {
+currentLine += word + ' ';
+}
+}
+if (currentLine.trim() !== '') lines.push(currentLine.trim());
+return lines;
+};
+
+const commonTooltipConfig = {
+tooltip: {
+backgroundColor: 'rgba(15, 23, 42, 0.9)',
+titleColor: '#00e5ff',
+bodyColor: '#e2e8f0',
+borderColor: '#334155',
+borderWidth: 1,
+padding: 12,
+callbacks: {
+title: function(tooltipItems) {
+const item = tooltipItems[0];
+let label = item.chart.data.labels[item.dataIndex];
+if (Array.isArray(label)) {
+return label.join(' ');
+} else {
+return label;
+}
+}
+}
+}
+};
+
+const initCharts = () => {
+Chart.defaults.color = '#94a3b8';
+Chart.defaults.font.family = "'Inter', sans-serif";
+
+const winRateCtx = document.getElementById('winRateChart').getContext('2d');
+new Chart(winRateCtx, {
+type: 'bar',
+data: {
+labels: [wrapLabel('Reactive RFP Bids'), wrapLabel('Proactive Ecosystem Campaigns')],
+datasets: [{
+label: 'Projected Win Rate (%)',
+data: [18, 65],
+backgroundColor: ['rgba(248, 113, 113, 0.6)', 'rgba(0, 229, 255, 0.8)'],
+borderColor: ['rgba(248, 113, 113, 1)', 'rgba(0, 229, 255, 1)'],
+borderWidth: 2,
+borderRadius: 6
+}]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+plugins: {
+legend: { display: false },
+...commonTooltipConfig
+},
+scales: {
+y: {
+beginAtZero: true,
+max: 100,
+grid: { color: '#334155' },
+title: { display: true, text: 'Win Percentage', color: '#cbd5e1' }
+},
+x: {
+grid: { display: false }
+}
+}
+}
+});
+
+const fundingCtx = document.getElementById('fundingChart').getContext('2d');
+new Chart(fundingCtx, {
+type: 'doughnut',
+data: {
+labels: [
+wrapLabel('FEMA C-UAS Grants'), 
+wrapLabel('Canadian CSSP/RCMP'), 
+wrapLabel('USDA Rural Dev'), 
+wrapLabel('DHS Security Funds')
+],
+datasets: [{
+data: [500, 250, 100, 150],
+backgroundColor: [
+'rgba(0, 229, 255, 0.8)',
+'rgba(59, 130, 246, 0.8)',
+'rgba(99, 102, 241, 0.8)',
+'rgba(16, 185, 129, 0.8)'
+],
+borderColor: '#0f172a',
+borderWidth: 4,
+hoverOffset: 10
+}]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+cutout: '65%',
+plugins: {
+legend: { position: 'right', labels: { color: '#e2e8f0', padding: 20 } },
+...commonTooltipConfig
+}
+}
+});
+
+const radarCtx = document.getElementById('radarChart').getContext('2d');
+new Chart(radarCtx, {
+type: 'radar',
+data: {
+labels: [
+wrapLabel('Network Survivability (MANET)'),
+wrapLabel('Airspace Defense Integration'),
+wrapLabel('Hardware Dispatch Reliability'),
+wrapLabel('Sovereign Cloud (PBMM)'),
+wrapLabel('App-Based Observation')
+],
+datasets: [{
+label: 'Motorola Ecosystem',
+data: [95, 90, 100, 100, 60],
+backgroundColor: 'rgba(0, 229, 255, 0.2)',
+borderColor: 'rgba(0, 229, 255, 1)',
+pointBackgroundColor: 'rgba(0, 229, 255, 1)',
+borderWidth: 2
+}, {
+label: 'Competitor (Axon)',
+data: [40, 30, 50, 40, 90],
+backgroundColor: 'rgba(248, 113, 113, 0.2)',
+borderColor: 'rgba(248, 113, 113, 1)',
+pointBackgroundColor: 'rgba(248, 113, 113, 1)',
+borderWidth: 2
+}]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+scales: {
+r: {
+angleLines: { color: '#334155' },
+grid: { color: '#334155' },
+pointLabels: { color: '#e2e8f0', font: { size: 11 } },
+ticks: { display: false, max: 100, min: 0 }
+}
+},
+plugins: {
+legend: { position: 'top', labels: { color: '#e2e8f0' } },
+...commonTooltipConfig
+}
+}
+});
+};
+
+document.addEventListener('DOMContentLoaded', initCharts);
+</script>
+</body>
+</html>
